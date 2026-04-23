@@ -1,0 +1,21 @@
+name: SecondWF
+on: workflow_dispatch
+jobs:
+  job1-build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: echo command
+       run: echo "building app"
+  job2-test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: echo command2
+       run: "echo running test cases"
+  job2-deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - name: echo command3
+       run: echo "deploying the app"
+     
+     
+    
