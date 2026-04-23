@@ -8,11 +8,13 @@ jobs:
        run: echo "building app"
   job2-test:
    runs-on: ubuntu-latest
+   needs: job1-build
    steps:
      - name: echo command2
        run: "echo running test cases"
-  job2-deploy:
+  job3-deploy:
    runs-on: ubuntu-latest
+   needs: job2-test
    steps:
      - name: echo command3
        run: echo "deploying the app"
