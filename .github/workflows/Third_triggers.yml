@@ -1,0 +1,8 @@
+name: thirdWF
+on: push
+jobs:
+  job1-build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: echo command
+       run: echo "building app"
